@@ -1,33 +1,29 @@
-Ext.define('phonegap.view.contato.Editor', {
+Ext.define('phonegap.view.file.Editor', {
   extend: 'Ext.Panel',
-  xtype: 'contatoEditor',
-  
+  xtype: 'fileEditor',
+
   requires: [
       'phonegap.view.toolbars.TopBack',
       'phonegap.view.toolbars.BottomForm',
       'phonegap.view.contato.Form'
   ],
-  
+
   config: {
     styleHtmlContent: true,
     fullscreen: true,
     scroll : true,
     layout : 'fit',
-    
+
     items: [
      {
        xtype: 'topbackbar',
        docked: 'top',
-       title: 'Contato'
+       title: 'Cadastro'
      },
       {
-        xtype: 'formcontato',
-        id: 'formContatoId'
+        xtype: 'formFile',
+        id: 'formFileId'
       },
-      {
-        docked: 'bottom',
-        xtype: 'bottomform',
-      }
     ],
   }
 });
